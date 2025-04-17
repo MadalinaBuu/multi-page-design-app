@@ -10,10 +10,12 @@ import { Component } from '@angular/core';
 export class NavBarComponent {
   isMenuOpen = false;
 
+  constructor() {}
+  
   menuItems = [
-    { label: 'Our Company', link: '#' },
-    { label: 'Locations', link: '#' },
-    { label: 'Contact', link: '#' }
+    { label: 'Our Company', link: '/our-company' },
+    { label: 'Locations', link: '/locations' },
+    { label: 'Contact', link: '/contact' }
   ];
 
   toggleMenu() {

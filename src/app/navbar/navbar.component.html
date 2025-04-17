@@ -15,10 +15,10 @@
       <img src="../../assets/images/shared/mobile/icon-hamburger.svg" (click)="toggleMenu()" alt="Menu">
     </div>
   
-    <ul class="dropdown-menu" *ngIf="isMenuOpen">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul class="dropdown-menu" [class.active]="isMenuOpen">
+      <li *ngFor="let item of menuItems">
+        <a [href]="item.link">{{ item.label }}</a>
+      </li>
     </ul>
   </nav>
   

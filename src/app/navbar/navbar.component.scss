@@ -27,26 +27,43 @@
       }
     }
   
-    .menu-mobile img {
-      width: 30px;
-      cursor: pointer;
-    }
-  
     .dropdown-menu {
       position: absolute;
       top: 60px;
       right: 10px;
-      background: white;
+      background: $white;
       list-style: none;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  
+
+      &.active {
+        display: block; // Show when toggled
+      }
+
       li a {
-        color: #333;
+        color: $black;
         text-decoration: none;
         display: block;
-        padding: 10px;
+        padding-bottom: 2px;
+        font-size: 12px;
       }
     }
   }
   
+//Tablet
+  @media (max-width: $tablet) {
+    .navbar {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+
+  // **Mobil**
+  @media (max-width: $mobile) {
+    .navbar {
+      padding: 1rem 1rem 0 1rem;
+    }
+
+    .menu-mobile {
+      display: block; // Activează icon-ul hamburger
+    }
+  }
