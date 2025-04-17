@@ -2,6 +2,21 @@
 
 body{
     font-family: $font-family-base;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+
+    .shared-section{
+        background-color: $peach;
+        height: 300px;
+    }
 }
+
+.container {
+    --bs-gutter-x: 0;
+  }
+
+
+  //Tablet
+  @media (max-width: $tablet) {
+    .container {
+        max-width: 695px;
+      }
+  }
