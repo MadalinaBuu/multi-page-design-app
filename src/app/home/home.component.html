@@ -69,4 +69,18 @@
             </div>
         </div>
     </div>
+    <div class="strengths-section">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let strength of strengths">
+              <div class="strength-wrapper">
+                <img class="background-svg" src="../../assets/images/shared/desktop/bg-pattern-small-circle.svg" [style.transform]="strength.circleRotation" alt="Background Shape">
+                <div class="strength-card">
+                  <img [src]="strength.image" [alt]="strength.name">
+                  <div class="title">{{ strength.name }}</div>
+                  <div class="description">{{ strength.description }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
 </div>

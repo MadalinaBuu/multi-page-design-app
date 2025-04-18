@@ -188,6 +188,35 @@
     }
 }
 
+.strengths-section {
+    .strength-wrapper {
+        position: relative; // Allows absolute positioning inside
+      
+        .background-svg {
+            position: absolute;
+            top: 6%;
+            left: 26%;
+            transform: translate(-50%, -50%);
+            width: 200px; // Adjust to fit the layout
+            height: auto;
+            opacity: 1; // Make it subtly visible
+            z-index: 1; // Keep it behind other elements
+        }
+      
+        .strength-card {
+          position: relative;
+          z-index: 2; // Ensures the card stays above the SVG
+          text-align: center;
+          padding: 20px;
+
+          .title{
+            text-transform: uppercase;
+            padding: 1.5rem 0;
+          }
+        }
+      }
+  }
+
 //Tablet
 @media (max-width: $tablet) {
     .shared-section {
