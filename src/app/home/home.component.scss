@@ -32,26 +32,27 @@
             padding-right: 3rem;
         }
 
-        &-text{
+        &-text {
             font-size: $body-font-size;
             line-height: 2rem;
             padding-right: 12rem;
             padding-bottom: 2rem;
         }
 
-        &-button{
-            button{
+        &-button {
+            button {
                 text-transform: uppercase;
                 padding: 0.7rem 1.5rem;
                 border-radius: 10px;
                 letter-spacing: 1px;
                 font-size: 15px;
-                border:none;
+                border: none;
+
                 &:hover {
                     background-color: $light-peach; // Schimbă culoarea la hover
                     color: $white;
                 }
-        
+
                 &:active {
                     background-color: $light-peach; // Schimbă culoarea când e apăsat
                     transform: scale(0.95); // Creează un efect subtil de apăsare
@@ -60,7 +61,7 @@
         }
     }
 
-    &-right{
+    &-right {
         position: relative;
         display: flex;
         align-items: flex-end; // Push image to bottom
@@ -72,13 +73,14 @@
         min-height: 640px;
         //margin-top: 2rem;
 
-        img{
+        img {
             position: absolute;
             bottom: -250px; // Moves it lower
             //right: 0;
             max-width: none; // Prevents unwanted resizing
         }
     }
+
     .circle-decoration {
         position: absolute;
         right: 0; // Push to the right edge
@@ -89,25 +91,125 @@
     }
 }
 
+.services-section {
+    .col-mg-lg {
+        margin-bottom: 45px;
+    }
+
+    // .col-lg-6 {
+    //     border: 2px solid red; // Check size visually
+    // }
+
+    .col-lg-6:last-child {
+        padding-left: 30px; // Adaugă spațiu între cele două coloane din dreapta
+    }
+
+    .row {
+        display: flex;
+        align-items: stretch; // Face coloanele egale în înălțime
+    }
+
+    .col-lg-6 img,
+    .col-lg-12 img {
+        width: 100%; // Ocupă toată lățimea
+        height: 100%; // Face ca imaginile să se întindă pe înălțimea coloanei
+        object-fit: cover; // Asigură că imaginea se ajustează fără distorsiuni
+    }
+
+    .row {
+        --bs-gutter-x: 0; // Elimină marginile implicite Bootstrap
+    }
+
+    .col-lg-6 {
+        padding: 0; // Elimină padding-ul intern
+    }
+
+    // .col-lg-12 img {
+    //     margin-bottom: 10px; // Spațiere între imagini
+    // }
+
+    img {
+        border-radius: 10px;
+
+        &:hover {
+            opacity: 1; // Shows overlay on hover
+        }
+    }
+
+    .image-container {
+        position: relative; // Permite poziționarea absolută a textului
+        //display: inline-block;
+        //overflow: hidden;
+        border-radius: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 143, 112, 0.7); // Overlay color
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            color: $white;
+            border-radius: inherit;
+        }
+
+        &:hover::after {
+            opacity: 1; // Shows overlay on hover
+        }
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%; // Poziționează textul în centru
+        left: 50%;
+        transform: translate(-50%, -50%); // Asigură centrare perfectă
+        color: $white; // Culoare text
+        padding: 10px 20px;
+        font-size: $h2-font-size;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 2;
+        width: 100%;
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+
+            img {
+                width: 0.5rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
 //Tablet
 @media (max-width: $tablet) {
     .shared-section {
         height: auto;
         padding: 2.5rem 4rem;
         text-align: center;
+
         &-left {
             padding: 0;
 
-            &-title{
+            &-title {
                 padding: 0;
                 padding-bottom: 1.5rem;
             }
-            &-text{
+
+            &-text {
                 padding: 0 4rem;
                 margin-bottom: 1.5rem;
             }
         }
-        &-right{
+
+        &-right {
             min-height: 550px;
         }
 
@@ -116,25 +218,48 @@
             transform: translateY(-30%);
             margin-right: -4rem;
         }
-    }
-  }
 
-  // **Mobil**
-  @media (max-width: $mobile) {
-    
+    }
+
+
+    .col-mg-lg {
+        margin-bottom: 0 !important;
+    }
+
+    .col-lg-6 {
+        padding-left: 0 !important; // Adaugă spațiu între cele două coloane din dreapta
+    }
+
+    .col-mg-md {
+        margin-bottom: 30px !important;
+    }
+
+    .col-lg-6 img,
+    .col-lg-12 img {
+        width: 100% !important; // Ocupă toată lățimea
+        max-height: 300px !important; // Face ca imaginile să se întindă pe înălțimea coloanei
+        object-fit: fill !important; // Asigură că imaginea se ajustează fără distorsiuni
+    }
+}
+
+// **Mobil**
+@media (max-width: $mobile) {
+
     .shared-section {
         padding: 2.5rem 1rem;
+
         &-left {
 
-            &-title{
+            &-title {
                 font-size: 32px;
             }
-            &-text{
+
+            &-text {
                 font-size: 15px;
                 padding: 0 1rem;
             }
         }
-        &-right{
-        }
+
+        &-right {}
     }
-  }
+}
