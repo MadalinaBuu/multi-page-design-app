@@ -1,0 +1,41 @@
+<div class="services-section">
+    <div class="row">
+        <!-- First Column: Large Image -->
+        <div class="col-lg-6 col-md-12 col-mg-md">
+            <div *ngFor="let service of services | slice:0:1" class="image-container">
+                <a [routerLink]="service.link">
+                    <img [src]="service.images.desktop" class="d-none d-lg-block" [alt]="service.name">
+                    <img [src]="service.images.tablet" class="d-none d-md-block d-lg-none" [alt]="service.name">
+                    <img [src]="service.images.mobile" class="d-md-none" [alt]="service.name">
+                    <div class="overlay-text">
+                        <div>{{ service.name }}</div>
+                        <div class="projects">View projects
+                            <img src="../../assets/images/shared/desktop/icon-right-arrow.svg" alt="arrow" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Second Column: Nested Row with Two Smaller Images -->
+        <div class="col-lg-6 col-md-12">
+            <div class="row">
+                <div class="col-lg-12 col-mg-lg col-mg-md" *ngFor="let service of services | slice:1">
+                    <div class="image-container">
+                        <a [routerLink]="service.link">
+                            <img [src]="service.images.desktop" class="d-none d-lg-block" [alt]="service.name">
+                            <img [src]="service.images.tablet" class="d-none d-md-block d-lg-none" [alt]="service.name">
+                            <img [src]="service.images.mobile" class="d-md-none" [alt]="service.name">
+                            <div class="overlay-text">
+                                <div>{{ service.name }}</div>
+                                <div class="projects">View projects
+                                    <img src="../../assets/images/shared/desktop/icon-right-arrow.svg" alt="arrow" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

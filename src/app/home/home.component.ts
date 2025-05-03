@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ServicesSectionComponent } from '../shared/services-section/services-section.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, ServicesSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

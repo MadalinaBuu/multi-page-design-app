@@ -1,55 +1,57 @@
 <div class="container">
-    <div class="shared-section">
-        <img class="background-svg" src="../../assets/images/web-design/desktop/bg-pattern-intro-web.svg" alt="Background Shape">
-        <div class="overlay-text">
-            <div class="title">Web design</div>
-            <div class="description">We build websites that serve as powerful marketing tools and bring memorable brand experiences.</div>
-        </div>
+  <div class="shared-section">
+    <img class="background-svg" src="../../assets/images/web-design/desktop/bg-pattern-intro-web.svg"
+      alt="Background Shape">
+    <div class="overlay-text">
+      <div class="title">Web design</div>
+      <div class="description">We build websites that serve as powerful marketing tools and bring memorable brand
+        experiences.</div>
     </div>
+  </div>
 
-    <div class="portfolio-section">
-        <!-- Desktop: 3 cards per row -->
-        <div class="row d-none d-lg-flex">
-          <div class="col-lg-4" *ngFor="let card of cards">
-            <div class="card">
-              <div class="image">
-                <img [src]="card.image" [alt]="card.title">
-              </div>
-              <div class="details">
-                <div class="title">{{ card.title }}</div>
-                <div class="description">{{ card.description }}</div>
-              </div>
-            </div>
+  <div class="portfolio-section">
+    <!-- Desktop: 3 cards per row -->
+    <div class="row d-none d-lg-flex">
+      <div class="col-lg-4" *ngFor="let card of cards">
+        <div class="card">
+          <div class="image">
+            <img [src]="card.image" [alt]="card.title">
           </div>
-        </div>
-      
-        <!-- Tablet: 2-column layout -->
-        <div class="row d-lg-none">
-          <div class="col-md-12" *ngFor="let card of cards">
-            <div class="card card-tablet">
-              <div class="image">
-                <img [src]="card.image" [alt]="card.title">
-              </div>
-              <div class="details">
-                <div class="title">{{ card.title }}</div>
-                <div class="description">{{ card.description }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row d-md-none d-md-block">
-          <div class="col-12" *ngFor="let card of cards">
-            <div class="card card-mobile">
-              <div class="image">
-                <img [src]="card.image" [alt]="card.title">
-              </div>
-              <div class="details">
-                <div class="title">{{ card.title }}</div>
-                <div class="description">{{ card.description }}</div>
-              </div>
-            </div>
+          <div class="details">
+            <div class="title">{{ card.title }}</div>
+            <div class="description">{{ card.description }}</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Tablet: 2-column layout -->
+    <div class="row d-none d-md-flex  d-lg-none">
+      <div class="col-md-12" *ngFor="let card of cards">
+        <div class="card card-tablet">
+          <div class="image">
+            <img [src]="card.image" [alt]="card.title">
+          </div>
+          <div class="details">
+            <div class="title">{{ card.title }}</div>
+            <div class="description">{{ card.description }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-md-none">
+      <div class="col-12" *ngFor="let card of cards">
+        <div class="card card-mobile">
+          <div class="image">
+            <img [src]="card.image" [alt]="card.title">
+          </div>
+          <div class="details">
+            <div class="title">{{ card.title }}</div>
+            <div class="description">{{ card.description }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
