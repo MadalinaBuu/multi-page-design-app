@@ -33,47 +33,7 @@
     }
 }
 
-.portfolio-section {
-    .card {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-  
-    .image img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-  
-    .details {
-      padding: 15px;
-      background-color: #FDF3F0;
-      
-      .title{
-        text-transform: uppercase;
-        padding: 1.5rem 0;
-        color: $light-peach;
-        font-size: $h3-font-size;
-        font-weight: $font-weight-medium;
-      }
-      .description{
-        padding-bottom: 1rem;
-      }
 
-      
-
-      &:hover{
-        background-color: $peach;
-        color: $white;
-
-        & .title{
-          color: $white;
-        }
-      }
-    }
-  }
 
   @media (max-width: 1200px) {
     .overlay-text{
@@ -82,8 +42,6 @@
       }
     }
   }
-
-
   
     // Tablet: Details next to the image
     @media (max-width: 1024px) {

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicesSectionComponent } from "../shared/services-section/services-section.component";
+import { PortfolioSectionComponent } from '../shared/portfolio-section/portfolio-section.component';
 
 @Component({
   selector: 'app-web-design',
-  imports: [CommonModule, ServicesSectionComponent],
+  imports: [CommonModule, ServicesSectionComponent, PortfolioSectionComponent],
   templateUrl: './web-design.component.html',
   styleUrl: './web-design.component.scss'
 })

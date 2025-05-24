@@ -1,1 +1,16 @@
-<p>graphic-design works!</p>
+<div class="container">
+    <div class="shared-section">
+      <img class="background-svg" src="../../assets/images/web-design/desktop/bg-pattern-intro-web.svg"
+        alt="Background Shape">
+      <div class="overlay-text">
+        <div class="title">App Design</div>
+        <div class="description">Our mobile designs bring intuitive digital solutions
+            to your customers right at their fingertips.</div>
+      </div>
+    </div>
+
+    <app-portfolio-section [cards]="cards"></app-portfolio-section>
+
+    <app-services-section [services]="services" [currentPage]="'app-design'">
+    </app-services-section>
+</div>
